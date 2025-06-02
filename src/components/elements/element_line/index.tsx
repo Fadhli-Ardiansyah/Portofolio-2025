@@ -1,9 +1,6 @@
 type ElementLineProps = {
     title: string;
     height: string;
-    heightSm: string;
-    heightMd: string;
-    heightLg: string;
 };
 
 const ElementLine = (props: ElementLineProps) => {
@@ -20,9 +17,7 @@ const ElementLine = (props: ElementLineProps) => {
                     {/* <div
                         className={`border w-0.5 h-100 sm:h-65 md:h-80 lg:h-90 `}
                     /> */}
-                    <div
-                        className={`border w-0.5  ${props.height} sm:${props.heightSm} md:${props.heightMd} lg:${props.heightLg} `}
-                    />
+                    <div className={`border w-0.5  ${props.height} `} />
                 </div>
             </div>
         </>

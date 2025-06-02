@@ -8,10 +8,10 @@ import linked from "../../../../public/icons/linked.svg";
 const FragmentFooter = () => {
     return (
         <>
-            <div className=" bg-[#111827] text-white ">
+            <div className=" bg-white/5 text-white ">
                 <div className=" flex justify-center pt-15 pb-15 ">
                     <div className=" container md:flex px-5">
-                        <div className="w-full  md:w-1/2 ">
+                        <div className="w-full  ">
                             <h2 className="text-white font-bold text-2xl mb-4">
                                 Fadhli Ardiansyah
                             </h2>
@@ -42,7 +42,7 @@ const FragmentFooter = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full md:flex md:justify-center md:w-xs ">
+                        <div className="w-full md:flex md:justify-center ">
                             <div className="">
                                 <h2 className="font-bold text-2xl mb-4 mt-5 lg:mt-0">
                                     Links
@@ -66,7 +66,7 @@ const FragmentFooter = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="w-full md:flex md:justify-center md:w-xs">
+                        <div className="w-full md:flex md:justify-center ">
                             <div className="">
                                 <h2 className="font-bold text-2xl mb-4 mt-5 lg:mt-0">
                                     Contact

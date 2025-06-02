@@ -12,27 +12,24 @@ const lexend = Lexend({
 const FragmentProjectSection = () => {
     return (
         <>
-            <div className="flex justify-center px-2 mt-25 mb-60">
+            <section className="flex justify-center px-2 mt-40 mb-60">
                 <div className="container relative">
-                    <div className="absolute md:hidden">
+                    <div className="absolute">
                         <ElementLine
                             title="D"
-                            height="h-[90vh]"
-                            heightSm=""
-                            heightMd=""
-                            heightLg=""
+                            height="h-200 sm:h-250 md:h-120 lg:h-150 xl:h-160"
                         />
                     </div>
                     <div
                         data-aos="fade-up"
                         data-aos-duration="500"
-                        className="flex md:justify-center transition-all duration-300">
+                        className="flex  transition-all duration-300">
                         <span
-                            className={`${lexend.className} ml-10 mt-15  text-2xl md:text-3xl bg-gradient-to-l to-[#4CC9FE] from-[#eb5ceb] text-transparent bg-clip-text transition-all duration-300`}>
+                            className={`${lexend.className} ml-10 mt-15  text-2xl md:text-3xl bg-gradient-to-l transition-all duration-300`}>
                             My Top Projects
                         </span>
                     </div>
-                    <div className="ml-10 md:gap-10 md:flex justify-around mt-10">
+                    <div className="ml-10 mt-10 md:gap-5  md:flex">
                         {/* <div className="columns-1 md:gap-10 md:columns-2 xl:columns-4 mt-10"> */}
                         <ElementCard
                             title="Web Kelas XI TKJ 2"
@@ -49,7 +46,7 @@ const FragmentProjectSection = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 };

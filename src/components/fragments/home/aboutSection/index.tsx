@@ -9,15 +9,12 @@ const lexend = Lexend({
 const FragmentAboutSection = () => {
     return (
         <>
-            <section className="flex justify-center mt-10 p-2 md:p-5 intersect-once intersect:motion-preset-slide-up">
+            <section id="about" className="flex justify-center mt-10 px-2 ">
                 <div className="container relative lg:flex md:justify-center transition-all duration-300 sm">
                     <div className="absolute ">
                         <ElementLine
                             title="F"
-                            height="h-100"
-                            heightSm=""
-                            heightMd="h-80"
-                            heightLg="h-90"
+                            height="h-100 sm:h-70 md:h-80 lg:h-90 xl:h-100"
                         />
                     </div>
                     <div
