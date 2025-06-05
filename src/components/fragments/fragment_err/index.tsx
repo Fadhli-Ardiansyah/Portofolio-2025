@@ -9,6 +9,23 @@ const lexend = Lexend({
 
 const FragmentErr = () => {
     const [count, setCount] = useState(5);
+    const [width, setWidth] = useState(0);
+
+    const errorPage = [
+        "ERROR PAGE",
+        "ERROR PAGE",
+        "ERROR PAGE",
+        "ERROR PAGE",
+        "ERROR PAGE",
+        "ERROR PAGE",
+    ];
+
+    if (width <= 768) {
+        errorPage.splice(0, 2);
+    }
+    if (width <= 480) {
+        errorPage.splice(0, 2);
+    }
 
     useEffect(() => {
         for (let i = 0; i < count; i++) {
@@ -17,9 +34,28 @@ const FragmentErr = () => {
                 console.log(count);
             }, 1000);
         }
+
         setTimeout(() => {
             window.location.href = "/";
         }, 5000);
+
+        // Fungsi untuk update state saat resize
+        const handleResize = () => {
+            if (typeof window !== "undefined") {
+                setWidth(window.innerWidth);
+            }
+        };
+
+        // Panggil sekali saat mount untuk set lebar awal
+        handleResize();
+
+        // Tambahkan listener resize
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            // Hapus listener saat unmount
+            window.removeEventListener("resize", handleResize);
+        };
     });
 
     return (
@@ -32,21 +68,15 @@ const FragmentErr = () => {
                         Kembali Ke Halaman Utama {count}
                     </h2>
                     <div className="relative">
-                        <div className="absolute flex justify-around w-full py-3 text-xl font-bold bg-[#eb5ceb81] rotate-3">
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
+                        <div className="absolute flex justify-around w-full py-3 md:text-xl font-bold bg-[#eb5ceb81] rotate-3">
+                            {errorPage.map((item, index) => (
+                                <h1 key={index}>{item}</h1>
+                            ))}
                         </div>
-                        <div className="flex py-3 justify-around text-xl font-bold bg-[#4cc9feb1] -rotate-3">
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
-                            <h1>ERROR PAGE</h1>
+                        <div className="flex py-3 justify-around md:text-xl font-bold bg-[#4cc9feb1] -rotate-3">
+                            {errorPage.map((item, index) => (
+                                <h1 key={index}>{item}</h1>
+                            ))}
                         </div>
                     </div>
                 </div>
