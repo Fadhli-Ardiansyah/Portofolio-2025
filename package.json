@@ -11,9 +11,11 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "bootstrap-icons": "^1.13.1",
+    "copy-to-clipboard": "^3.3.3",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
     "typeit-react": "^2.7.8"
   },
   "devDependencies": {

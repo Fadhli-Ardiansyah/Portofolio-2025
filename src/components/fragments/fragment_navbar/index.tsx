@@ -59,11 +59,15 @@ const FragmentNavbar = () => {
                         </ul>
                     </div>
                     <div className="">
-                        <button
-                            className={` ${lexend.className}text-sm hidden md:block md:text-[15px] font-bold cursor-pointer     `}>
-                            <i className="bi bi-github mr-2" />
-                            Github
-                        </button>
+                        <Link
+                            href="https://github.com/Fadhli-Ardiansyah/Fadhli-Ardiansyah"
+                            target="blank">
+                            <button
+                                className={` ${lexend.className}text-sm hidden md:block md:text-[15px] font-bold cursor-pointer     `}>
+                                <i className="bi bi-github mr-2" />
+                                Github
+                            </button>
+                        </Link>
                     </div>
                     <div className="md:hidden">
                         <i
